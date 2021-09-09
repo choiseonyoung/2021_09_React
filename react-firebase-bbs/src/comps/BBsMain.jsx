@@ -1,34 +1,28 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
-function MainNav() {
-  const activeNavStyle = {
-    backgroundColor: "pink",
-  };
+function BBsMain() {
   return (
-    <ul className="main_menu">
-      <li>
-        <NavLink to="/" activeStyle={activeNavStyle} exact>
-          Home
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/write" activeStyle={activeNavStyle}>
-          글쓰기
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/login" activeStyle={activeNavStyle}>
-          로그인
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/join" activeStyle={activeNavStyle}>
-          회원가입
-        </NavLink>
-      </li>
-    </ul>
+    <section className="main_section">
+      <table className="list">
+        <thead>
+          <tr>
+            <th>작성일자</th>
+            <th>작성시각</th>
+            <th>작성자</th>
+            <th>제목</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   );
 }
 
-export default MainNav;
+export default BBsMain;
