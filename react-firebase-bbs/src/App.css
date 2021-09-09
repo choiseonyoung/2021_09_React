@@ -6,6 +6,10 @@
 
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 }
 
 .App-logo {
@@ -21,7 +25,7 @@
 
 .App-header {
   background-color: pink;
-  min-height: 20vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,4 +66,14 @@ table.list td:nth-of-type(1) {
 
 table.list th {
   border-bottom: 2px solid gray;
+}
+
+section.main_section {
+  flex: 1;
+}
+
+footer {
+  background-color: lightgray;
+  color: white;
+  padding: 0.8rem;
 }

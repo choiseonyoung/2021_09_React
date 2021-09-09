@@ -1,21 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
-import "./css/menu.css";
-import MainNav from "./comps/MainNav";
-import BBsMain from "./comps/BBsMain";
-import Header from "./comps/Header";
-
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Header, MainNav, BBsMain, BBsWrite, Footer } from "./comps";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="App">
         <Header />
         <MainNav />
-        <BBsMain />
+        <section className="main_section">
+          <Route path="/" component={BBsMain} exact />
+          <Route path="/write" component={BBsWrite} exact />
+        </section>
+        <Footer />
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 

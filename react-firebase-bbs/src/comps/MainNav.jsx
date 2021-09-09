@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/MainNav.css";
 import { NavLink } from "react-router-dom";
 
 function MainNav() {
@@ -6,24 +7,24 @@ function MainNav() {
     backgroundColor: "pink",
   };
   return (
-    <ul className="main_menu">
+    <ul className="main_nav">
       <li>
-        <NavLink to="/" activeStyle={activeNavStyle} exact>
+        <NavLink exact to="/" activeClassName="active_nav">
           Home
         </NavLink>
       </li>
       <li>
-        <NavLink to="/write" activeStyle={activeNavStyle}>
+        <NavLink exact to="/write" activeClassName="active_nav">
           글쓰기
         </NavLink>
       </li>
       <li>
-        <NavLink to="/login" activeStyle={activeNavStyle}>
+        <NavLink exact to="/login" activeClassName="active_nav">
           로그인
         </NavLink>
       </li>
       <li>
-        <NavLink to="/join" activeStyle={activeNavStyle}>
+        <NavLink exact to="/join" activeClassName="active_nav">
           회원가입
         </NavLink>
       </li>
