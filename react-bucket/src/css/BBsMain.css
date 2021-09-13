@@ -1,0 +1,22 @@
+.main_box {
+  width: 90%;
+  margin: auto;
+}
+
+.main_box input {
+  width: 100%;
+  height: 40px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.main_box table {
+  width: 100%;
+  border: 2px solid gray;
+  line-height: 25px;
+  padding: 10px;
+}
+
+.main_box table th {
+  text-align: left;
+}

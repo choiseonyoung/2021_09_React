@@ -20,7 +20,7 @@ import "./App.css";
 // import { Header, RemBody, Footer } from "./comps";
 import { Header, Footer } from "./comps";
 import { RemBody } from "./comps";
-// (리액트가 아니라 자바스크리트에서 지원되는 코드)
+// (리액트가 아니라 자바스크립트에서 지원되는 코드)
 
 function App() {
   return (
