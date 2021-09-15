@@ -20,9 +20,12 @@ function BucketItem({ args, bucket }) {
 
     const itemTd = e.target;
 
+    let sendBucket = { ...bucket };
+
     if (itemTd.tagName === "TD") {
       const className = itemTd.className;
       if (className.includes("b_flag")) {
+        sendBucket.b_flag = bucket.b_flag + 1;
         flag_change(b_id);
       } else if (className.includes("b_title")) {
         // input box 나타나는 코드

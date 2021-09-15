@@ -6,7 +6,9 @@ function BucketInput(props) {
       const bucket = e.target.value;
       // 전달받은 bucket_insert() 함수에
       // input에 입력된 bucket text를 전달하기
+
       props.bucket_insert(bucket);
+      e.target.value = "";
     }
   };
   return (
