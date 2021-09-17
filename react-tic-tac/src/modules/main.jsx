@@ -71,4 +71,43 @@ const RenderSquare = ({ squares, changeSquares }) => {
   return buttons;
 };
 
-export { RenderSquare };
+/**
+ * 0,1,2
+ * 3,4,5
+ * 6,7,8
+ */
+const calcWinner = (squares) => {
+  const temp = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
+  squares.forEach(hi, index, temp) {
+	  let [a,b,c] = temp[i];
+	  
+  }
+//   for (let i = 0; i < temp.length; i++) {
+//     let [a, b, c] = temp[i];
+//     if (squares[a] === squares[b] && squares[a] === squares[c]) {
+//       return squares[a];
+//     }
+//   }
+  return null;
+  /////
+  //   if (squares[0] && squares[0] === squares[1] && squares[0] === squares[2]) {
+  //     return squares[0];
+  //   } else if (
+  //     squares[3] &&
+  //     squares[3] === squares[4] &&
+  //     squares[3] === squares[5]
+  //   ) {
+  //     return squares[3];
+  //   }
+};
+
+export { RenderSquare, calcWinner };
