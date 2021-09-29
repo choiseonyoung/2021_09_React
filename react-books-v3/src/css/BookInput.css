@@ -1,0 +1,21 @@
+.input_box {
+  width: 70vw;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  padding: 0.7rem;
+}
+
+.input_box label,
+.input_box input {
+  display: block;
+  /* (이걸 해주면 width, height 넣을 수 있다) */
+  padding: 8px;
+  margin: 5px auto;
+  width: 50%;
+}
+
+.input_box label {
+  text-align: left;
+  color: black;
+  font-weight: bold;
+}
