@@ -1,0 +1,15 @@
+.view_box {
+  display: flex;
+  justify-content: center;
+  width: 70vw;
+  margin: 20px auto;
+  border: 1px solid lightgray;
+  padding: 0.7rem;
+}
+
+.view_box p {
+  font-weight: bold;
+  width: 40%;
+  border: 1px solid gray;
+  margin: 20px auto;
+}

@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import BookInput from "./BookInput";
 import BookContext from "../context/BookContext";
 import BookList from "./BookList";
+import UUID from "react-uuid";
 
 /**
  * 컴포넌트의 선택적 Rendering
@@ -11,11 +12,20 @@ import BookList from "./BookList";
  */
 function BookMain() {
   const [book, setBook] = useState({
+    b_id: UUID(),
     b_name: "자바를 자바라",
     b_genre: "IT 개발서",
   });
 
-  const providerData = { book, setBook };
+  const [bookList, setBookList] = useState([]);
+
+  // (이런 함수도 provider에 보낼 수 있다)
+  // 상위 컴포넌트에서 이벤트를 생성하고 하위 컴포넌트로 전달할 때는 반드시 e(event) 매개변수를 같이 포함하는 것이 좋다
+  const onClick = (e) => {
+    alert("여기는 onClick");
+  };
+
+  const providerData = { book, setBook, bookList, setBookList, onClick };
   return (
     // 제일 바깥쪽 태그는 이름을 지워도 됨
     <>
