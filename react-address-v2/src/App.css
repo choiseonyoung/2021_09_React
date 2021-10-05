@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "ChosunGu";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "ChosunGu";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
@@ -14,8 +29,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* background-color: rgb(202, 238, 201); */
+  background-image: url("C:\bizworks\React\react-address-v2\src\img\diary.png");
+  min-height: 27vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,27 +53,51 @@
   }
 }
 
-div.input {
-  width: 100vw;
+.input_box {
+  width: 600px;
+  height: 350px;
+  margin: 30px auto;
+  padding: 15px;
 }
 
-div.input_form label,
-div.input_form input {
-  display: inline-block;
-  width: 40%;
+.input_box input {
+  display: block;
+  width: 70%;
+  height: 13%;
+  margin: 20px auto;
+  padding: 15px;
+  font-size: 17px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  outline: none;
 }
 
-div.input_form label {
-  text-align: right;
+.input_box input:focus {
+  border: 2px solid lightpink;
 }
 
 button {
-  width: 100px;
-  height: 30px;
-  border: 0;
-  margin: 30px auto;
+  width: 30%;
+  height: 15%;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 table {
-  width: 50vw;
+  width: 1200px;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+}
+
+table tr {
+  height: 50px;
+}
+
+table th {
+  font-size: 20px;
+}
+
+table td {
+  font-size: 17px;
 }

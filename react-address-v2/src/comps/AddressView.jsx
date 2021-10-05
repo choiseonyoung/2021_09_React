@@ -3,32 +3,30 @@ import React from "react";
 // 비구조화
 // const {addressList} = props 대신 직접 분해하면서 받기
 function AddressView({ addressList }) {
-  const viewList = addressList.map((address, index) => {
+  const viewList = addressList.map((addr, index) => {
     return (
-      <tr key={address.r_id}>
+      <tr key={addr.r_id}>
         <td>{index + 1}</td>
-        <td>{address.u_name}</td>
-        <td>{address.u_addr}</td>
-        <td>{address.u_tel}</td>
-        <td>{address.u_age}</td>
+        <td>{addr.u_name}</td>
+        <td>{addr.u_addr}</td>
+        <td>{addr.u_tel}</td>
+        <td>{addr.u_age}</td>
       </tr>
     );
   });
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>이름</th>
-            <th>주소</th>
-            <th>전화번호</th>
-            <th>나이</th>
-          </tr>
-        </thead>
-        <tbody>{viewList}</tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th width="10%">ID</th>
+          <th width="15%">이름</th>
+          <th width="45%">주소</th>
+          <th width="20%">전화번호</th>
+          <th width="10%">나이</th>
+        </tr>
+      </thead>
+      <tbody>{viewList}</tbody>
+    </table>
   );
 }
 

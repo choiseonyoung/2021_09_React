@@ -24,10 +24,9 @@ function App() {
   };
   return (
     <div className="App">
-      <header className="App-header">
-        <AddressInput stateGroup={stateGroup} />
-        <AddressView addressList={addressList} />
-      </header>
+      <header className="App-header"></header>
+      <AddressInput stateGroup={stateGroup} />
+      <AddressView addressList={addressList} />
     </div>
   );
 }
