@@ -5,11 +5,15 @@ import { useUserContext } from "../context/UserContextProvider";
 function BBs() {
   const { user, setUser } = useUserContext();
   const history = useHistory();
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:8080/users", {
         method: "POST",
-        header: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "http://localhost:3000",
+        },
         credentials: "include",
       });
       const result = await res.json();

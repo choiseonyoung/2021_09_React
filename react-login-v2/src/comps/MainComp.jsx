@@ -7,6 +7,8 @@ import Notice from "./Notice";
 import BBs from "./BBs";
 import { useUserContext } from "../context/UserContextProvider";
 import Admin from "./Admin";
+import Logout from "./Logout";
+import AuthRoute from "./AuthRoute";
 
 function MainComp() {
   const { user, setUser } = useUserContext();
@@ -20,7 +22,7 @@ function MainComp() {
     user?.userid
       ? { id: 4, title: "마이페이지", link: "/mypage" }
       : { id: 4, title: "회원가입", link: "/join" },
-    { id: 5, title: "게시판관리", link: "/admin" },
+    { id: 5, title: "회원정보보기", link: "/admin" },
   ];
   return (
     <MainNav NavList={NavList}>
@@ -28,11 +30,16 @@ function MainComp() {
         <div>홈화면</div>
       </Route>
       <Route path="/notice" exact>
-        <Notice />
+        <AuthRoute>
+          <Notice />
+        </AuthRoute>
       </Route>
       <Route path="/bbs" exact>
-        <BBs />
+        <AuthRoute>
+          <BBs />
+        </AuthRoute>
       </Route>
+
       <Route path="/login" exact>
         <LoginForm />
       </Route>
@@ -40,11 +47,14 @@ function MainComp() {
         <JoinForm />
       </Route>
 
-      {/* 좋은 코드는 아니나 테스트 */}
-      <Route path="/logout"></Route>
+      <Route path="/logout">
+        <Logout />
+      </Route>
 
       <Route path="/admin" exact>
-        <Admin />
+        <AuthRoute>
+          <Admin role={user.role} />
+        </AuthRoute>
       </Route>
     </MainNav>
   );
