@@ -32,9 +32,9 @@ function AppContextProvider({ children }) {
   const [todo, setTodo] = useState({
     t_id: 0,
     t_text: "방가방가",
-    t_isComplete: false,
+    t_comp: false,
   });
-  const [todoList, setTodoList] = useState([todo]);
+  const [todoList, setTodoList] = useState([]);
 
   // Reference 변수 선언하기
   const nextId = useRef(0); // 정수형 변수
