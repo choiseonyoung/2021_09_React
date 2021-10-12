@@ -1,7 +1,6 @@
-import React from "react";
-import "../css/TodoList.css";
-import TodoItem from "./TodoItem";
-import { useTodoContext } from "../context/AppContextProvider";
+import "../../css/TodoList.css";
+import { TodoItem } from "../index";
+import { useTodoContext } from "../../context";
 
 function TodoList() {
   const { todoList } = useTodoContext();

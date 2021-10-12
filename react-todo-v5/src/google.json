@@ -1,0 +1,11 @@
+{
+  "web": {
+    "client_id": "79085239520-v2tp676gabkirqqu6qen690b71gkpbhi.apps.googleusercontent.com",
+    "project_id": "endless-galaxy-328806",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "javascript_origins": ["http://localhost:3000"]
+  }
+}

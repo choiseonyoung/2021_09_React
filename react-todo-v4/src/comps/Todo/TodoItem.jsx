@@ -1,6 +1,5 @@
-import React from "react";
-import "../css/TodoItem.css";
-import { useTodoContext } from "../context/AppContextProvider";
+import "../../css/TodoItem.css";
+import { useTodoContext } from "../../context";
 
 function TodoItem({ todo }) {
   const { t_id, t_text, t_comp } = todo;
