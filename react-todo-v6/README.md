@@ -1,4 +1,4 @@
-[upgrade] react-todo-v4에서 구글 로그인 기능 추가
+[upgrade] react-todo-v4에서 node-passport 프로젝트와 연동한 로그인 기능 추가 및 css 보완
 
 # todoList에 login 부착하기
 

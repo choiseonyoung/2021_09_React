@@ -1,0 +1,29 @@
+.login_form {
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.login_form input {
+  display: block;
+  width: 20%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  font-size: 15px;
+}
+
+.login_form button {
+  width: 100px;
+  height: 50px;
+  background-color: pink;
+  font-size: 20px;
+  font-weight: 700px;
+  line-height: 49px;
+  margin: 16px auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}

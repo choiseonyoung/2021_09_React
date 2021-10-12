@@ -1,8 +1,27 @@
 import "../../css/GoogleButton.css";
 import { useEffect, useRef } from "react";
+import { useUserContext } from "../../context";
 
 function GoogleButton() {
   const buttonRef = useRef();
+  const { setUser } = useUserContext();
+
+  const googleResponse = (result) => {
+    const profile = result.getBasicProfile();
+    const email = profile.getEmail();
+    const id = profile.getId();
+    const name = profile.getName();
+    const image = profile.getImageUrl();
+
+    const Token = result.getAuthResponse().id_token;
+
+    setUser({
+      userid: email,
+      login_source: "GOOGLE",
+    });
+    alert(email + " 님 반갑습니다 !");
+  };
+
   /**
    * public/index.html 파일에 script를 import 한다
    * src="https://apis.google.com/js/api:client.js"
@@ -21,10 +40,15 @@ function GoogleButton() {
       const auth2 = await window.gapi.auth2.init({
         // * 초기화시키기
         client_id:
-          "79085239520-v2tp676gabkirqqu6qen690b71gkpbhi.apps.googleusercontent.com",
+          "25572880857-ghl9be0u1s0jq2uku9t01v8ql1vamt6u.apps.googleusercontent.com",
         scope: "profile email",
       });
-      await auth2.attachClickHandler(buttonRef.current, {});
+      if (auth2?.isSignedIn.get()) {
+        // * 구글로부터 로그인을 이미 한 적이 있으면 true가 됨
+        console.log("로그인이 이미 된 상태");
+        // 원하는 곳으로 redirect
+      }
+      await auth2.attachClickHandler(buttonRef.current, {}, googleResponse);
     });
   };
 

@@ -1,4 +1,4 @@
-react-todo-v3에서 로그인 기능 추가
+[upgrade] react-todo-v3에서 로그인 기능 추가  
 처음 프로젝트가 시작되면 로그인 페이지가 뜨고 로그인에 성공하면 Main 화면으로 넘어간다
 
 # todoList에 login 부착하기
