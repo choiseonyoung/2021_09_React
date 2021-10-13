@@ -14,9 +14,7 @@ import { AuthRoute } from "./comps";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <header className="App-header">TO DO LIST</header>
       {/* TodoMain.jsx Layout을 사용하여 TODO 화면을 구현 */}
       <UserContextProvider>
         <LoginRoute>

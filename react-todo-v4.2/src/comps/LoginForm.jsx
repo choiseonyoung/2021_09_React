@@ -1,10 +1,8 @@
 import "../css/LoginForm.css";
 import { useState } from "react";
 import { useUserContext } from "../context";
-import MyButton from "./Buttons/MyButton";
 import { useHistory } from "react-router-dom";
 import { fetchLogin } from "../modules/fetchModule";
-import { GoogleButton } from "../comps";
 
 function LoginForm() {
   const { setUser } = useUserContext();
@@ -40,7 +38,6 @@ function LoginForm() {
         onChange={onChange}
       />
       <button onClick={onLogin}>로그인</button>
-      <GoogleButton />
     </div>
   );
 }

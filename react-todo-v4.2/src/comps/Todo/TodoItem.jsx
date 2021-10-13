@@ -16,7 +16,6 @@ function TodoItem({ todo }) {
         data-todo-id={t_id}
       >
         {t_text}
-        {t_id}
       </div>
       {/* 현재 todo의 t_comp 값이 true일 때만 이 tag가 나타나도록 */}
       {t_comp && <div className="check_mark">&#x2713;</div>}

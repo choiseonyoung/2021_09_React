@@ -11,7 +11,7 @@ const fetchOption = {
 
 const fetchLogin = async (userid, password) => {
   // 이미 선언된 fetchOption에 body 속성 추가하기
-  fetchOption.body(JSON.stringify({ userid, password }));
+  fetchOption.body = JSON.stringify({ userid, password });
 
   // * 현재 버전에서 fetch를 하기 위해 필요한 최소한의 설정들
   const response = await fetch(

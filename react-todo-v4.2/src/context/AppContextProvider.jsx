@@ -7,7 +7,7 @@ export const useTodoContext = () => useContext(AppContext);
 function AppContextProvider({ children }) {
   const [todo, setTodo] = useState({
     t_id: 0,
-    t_text: "방가방가",
+    t_text: "",
     t_comp: false,
   });
   const [todoList, setTodoList] = useState([]);

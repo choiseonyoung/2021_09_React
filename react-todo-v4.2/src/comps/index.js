@@ -12,6 +12,4 @@ export { default as HomeButton } from "./Buttons/HomeButton";
 
 export { default as MyButton } from "./Buttons/MyButton";
 
-export { default as GoogleButton } from "../../../react-todo-v6/src/comps/Buttons/GoogleButton";
-
 // * import와 동시에 그 이름으로 export 하는 코드

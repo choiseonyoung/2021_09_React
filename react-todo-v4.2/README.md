@@ -1,4 +1,4 @@
-[upgrade] react-todo-v5에서 구글 로그인 기능만 구현하기 위해 복제 + 깃허브에 배포하기
+[upgrade] react-todo-v4에서 node-passport 프로젝트와 연동한 로그인 기능 추가 및 css 보완
 
 # todoList에 login 부착하기
 
@@ -16,14 +16,3 @@
 ## 로그인을 수행한 후 로그인정보(user)를 유지하기 위하여
 
 - User 정보를 관리할 Context를 생성
-
-## git page에 deploy 하기
-
-- git-hub를 사용하여 react 프로젝트 공개하기
-- git page는 static 방식의 web hosting
-
-1. git repository 만들기 : TodoList
-2. local project를 repository로 설정하기 : git init
-3. local project push 준비 : git add .
-4. local project commit 하기 : git commit -m first
-5. 원격, local repository 연결하기 : git remote add ....

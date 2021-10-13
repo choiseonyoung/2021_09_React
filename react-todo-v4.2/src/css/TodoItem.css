@@ -1,11 +1,12 @@
 .todo_item {
   display: flex;
-  padding: 1rem;
+  padding: 10px;
   align-items: center;
   cursor: pointer;
   transition: 0.2s;
   user-select: none;
   /* 더블클릭하면 블록씌워지는 거 없애기 */
+  font-size: 20px;
 }
 
 .todo_item:hover {
